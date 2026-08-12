@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { BorderBeam } from "./BorderBeam";
+import { BorderBeam } from "@/registry/magicui/border-beam";
 
 export const BentoCard = ({
   children,
@@ -33,12 +33,12 @@ export const BentoCard = ({
   };
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full flex flex-col">
       <div
         ref={cardRef}
         onMouseMove={handleMouseMove}
         className={cn(
-          "group relative flex flex-col justify-between overflow-hidden rounded-2xl p-6 transition-all duration-300",
+          "group relative flex-1 flex flex-col justify-between overflow-hidden rounded-2xl p-6 transition-all duration-300",
           "bg-white/[0.03] border border-white/[0.06] hover:border-indigo-500/30 shadow-lg shadow-black/10 hover:shadow-xl hover:bg-white/[0.06] cursor-pointer",
           className
         )}
@@ -51,15 +51,17 @@ export const BentoCard = ({
           }}
         />
 
-        {showBorderBeam && <BorderBeam size={150} duration={8} colorFrom="#6366f1" colorTo="#8b5cf6" />}
+        {showBorderBeam && <BorderBeam duration={8} size={100} colorFrom="#6366f1" colorTo="#8b5cf6" />}
 
         {header && <div className="mb-4 overflow-hidden rounded-xl">{header}</div>}
 
-        <div className="relative z-10 space-y-2">
-          {icon && <div className="inline-flex rounded-lg bg-indigo-500/10 p-2.5 text-indigo-400 border border-indigo-500/20">{icon}</div>}
-          {title && <h3 className="text-xl font-bold tracking-tight text-white">{title}</h3>}
-          {description && <p className="text-xs sm:text-sm leading-relaxed text-slate-400">{description}</p>}
-          {children}
+        <div className="relative z-10 flex-1 flex flex-col justify-between space-y-4">
+          <div className="space-y-2">
+            {icon && <div className="inline-flex rounded-lg bg-indigo-500/10 p-2.5 text-indigo-400 border border-indigo-500/20">{icon}</div>}
+            {title && <h3 className="text-xl font-bold tracking-tight text-white">{title}</h3>}
+            {description && <p className="text-xs sm:text-sm leading-relaxed text-slate-400">{description}</p>}
+          </div>
+          {children && <div className="pt-2">{children}</div>}
         </div>
       </div>
     </div>

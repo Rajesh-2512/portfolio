@@ -1,55 +1,43 @@
 "use client";
 
-import React, { useState } from "react";
-import { ShieldCheck, FileCheck, AlertTriangle, Clock, CheckCircle2 } from "lucide-react";
+import React from "react";
+import { ShieldCheck, FileCheck, CheckCircle2 } from "lucide-react";
 
 export const ComplianceDemo = () => {
-  const [formFieldType, setFormFieldType] = useState("dynamic-select");
-
   return (
-    <div className="rounded-2xl bg-white border border-slate-200 p-4 text-slate-900 text-xs space-y-4 shadow-xl">
-      <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+    <div className="rounded-2xl bg-[#080c14] border border-slate-800 p-3.5 text-slate-100 text-xs space-y-3 shadow-xl h-full flex flex-col justify-between">
+      <div className="flex items-center justify-between border-b border-slate-800/80 pb-2">
         <div className="flex items-center space-x-2">
-          <ShieldCheck size={14} className="text-emerald-600" />
-          <span className="font-bold text-slate-900">Configurable Compliance & Dynamic Form Engine</span>
+          <ShieldCheck size={14} className="text-emerald-400" />
+          <span className="font-bold text-white text-xs">Configurable Compliance Engine</span>
         </div>
-        <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold">
+        <span className="text-[9px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
           100% Audit-Ready
         </span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
-        {/* Left: Dynamic Form Field Simulator */}
-        <div className="md:col-span-7 rounded-xl bg-slate-50 border border-slate-200 p-3 space-y-3">
-          <div className="flex justify-between items-center">
-            <span className="font-bold text-slate-900 text-[11px]">JSON Form Schema Builder</span>
-            <span className="text-[9px] text-slate-500 font-semibold">React Hook Form + Zod</span>
-          </div>
-
-          <div className="space-y-2">
-            <div className="p-2 rounded bg-white border border-slate-200 flex justify-between items-center text-[10px] shadow-2xs">
-              <span className="text-slate-700 font-medium">Form Rule: Document Expiry Validation</span>
-              <span className="text-indigo-600 font-mono font-bold">Zod.date().min(now)</span>
-            </div>
-            <div className="p-2 rounded bg-white border border-slate-200 flex justify-between items-center text-[10px] shadow-2xs">
-              <span className="text-slate-700 font-medium">Conditional Workflow: Escalation Trigger</span>
-              <span className="text-amber-600 font-mono font-bold">if (days &lt; 7) notify(manager)</span>
-            </div>
+      <div className="grid grid-cols-2 gap-2 flex-1">
+        <div className="bg-slate-900/90 rounded-xl p-2.5 border border-slate-800 space-y-1.5 flex flex-col justify-between">
+          <span className="text-[9px] font-mono font-bold text-indigo-400 uppercase block">JSON Schema Builder</span>
+          <div className="space-y-1 font-mono text-[9px] text-slate-300">
+            <div>Form Rule: <strong className="text-white">Document Expiry Validation</strong></div>
+            <div className="text-emerald-400">Workflow: notify(manager)</div>
           </div>
         </div>
 
-        {/* Right: Compliance Score Health Widget */}
-        <div className="md:col-span-5 rounded-xl bg-slate-50 border border-slate-200 p-3 space-y-2 text-center flex flex-col justify-between">
-          <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Enterprise Compliance Score</span>
-          <div className="my-1">
-            <span className="text-3xl font-extrabold text-emerald-600">98.4%</span>
-            <span className="text-[10px] text-slate-500 font-medium block mt-0.5">0 Non-compliance breaches</span>
-          </div>
-          <div className="p-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-semibold flex items-center justify-center space-x-1">
-            <CheckCircle2 size={12} className="text-emerald-600" />
-            <span>Audit Trail Logs Verified</span>
-          </div>
+        <div className="bg-slate-900/90 rounded-xl p-2.5 border border-slate-800 text-center flex flex-col justify-between">
+          <span className="text-[9px] font-mono text-slate-400 uppercase block">Compliance Score</span>
+          <span className="text-2xl font-mono font-extrabold text-emerald-400">98.4%</span>
+          <span className="text-[9px] font-mono text-emerald-300 flex items-center justify-center space-x-1">
+            <CheckCircle2 size={10} />
+            <span>Audit Trail Verified</span>
+          </span>
         </div>
+      </div>
+
+      <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-mono text-emerald-300 flex items-center justify-between">
+        <span>Dynamic Form Engine:</span>
+        <strong className="text-white">React Hook Form + Zod</strong>
       </div>
     </div>
   );

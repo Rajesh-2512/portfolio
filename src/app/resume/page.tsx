@@ -206,7 +206,7 @@ export default function ResumePage() {
       doc.setFont("helvetica", "bold");
       doc.setFontSize(8);
       doc.setTextColor(subTextColor);
-      doc.text(`${PERSONAL_INFO.education.period} (CGPA: ${PERSONAL_INFO.education.cgpa})`, 195, y, { align: "right" });
+      doc.text(`${PERSONAL_INFO.education.period} (CGPA: ${PERSONAL_INFO.education.cgpa})`, 205, y, { align: "right" });
 
       // Save PDF Directly
       doc.save("Rajesh_Kannan_A_Resume.pdf");

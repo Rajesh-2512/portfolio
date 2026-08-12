@@ -101,14 +101,14 @@ body {
   animation: pulseGlow 4s infinite ease-in-out;
 }
 
-@keyframes borderBeam {
-  100% {
+@keyframes border-beam {
+  to {
     offset-distance: 100%;
   }
 }
 
 .animate-border-beam {
-  animation: borderBeam var(--duration, 10s) infinite linear;
+  animation: border-beam calc(var(--duration) * 1s) infinite linear;
 }
 
 @keyframes shinyText {
