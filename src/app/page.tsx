@@ -16,6 +16,7 @@ import { ContactSection } from "@/components/contact/ContactSection";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
+  // sgvsh
   return (
     <main className="min-h-screen bg-[#0a0a0f] text-white selection:bg-indigo-500 selection:text-white">
       <Navbar />
