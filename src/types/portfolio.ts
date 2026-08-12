@@ -17,6 +17,7 @@ export interface Project {
   techStack: string[];
   highlights: string[];
   caseStudy: ProjectCaseStudy;
+  liveUrl?: string;
   badge?: string;
   metrics?: { label: string; value: string }[];
 }
@@ -29,6 +30,7 @@ export interface ExperienceItem {
   location: string;
   summary?: string;
   highlights: string[];
+  skills?: string[];
   current?: boolean;
 }
 

@@ -76,6 +76,56 @@ export const IMPACT_METRICS: ImpactMetric[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: "crackers-ecommerce",
+    title: "Sri Arumugam Pyro Park - Crackers Shop E-Commerce & Admin",
+    category: "Full-Stack E-Commerce & Admin Portal",
+    shortDesc:
+      "A production e-commerce store and admin management portal built for a premier crackers shop featuring live product catalog, cart management, dynamic pricing, and WhatsApp orders.",
+    businessProblem:
+      "Traditional crackers shops faced seasonal order rushes, offline inventory tracking challenges, and manual phone order intake.",
+    keyImpact: "Live production store deployed on Vercel; automated WhatsApp order booking & integrated admin inventory portal",
+    liveUrl: "https://crackers-rho.vercel.app/",
+    techStack: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "Zustand", "REST APIs", "Vercel"],
+    highlights: [
+      "Full-stack e-commerce storefront deployed live at crackers-rho.vercel.app",
+      "Integrated Admin Management Portal for inventory, pricing, & order processing",
+      "Instant category filtering, cart management, and 50% discount calculator",
+      "One-click WhatsApp order confirmation & PDF invoice generation",
+      "Mobile-first responsive architecture built with Next.js App Router",
+    ],
+    caseStudy: {
+      problem:
+        "High festive season demand caused inventory overselling, phone line bottlenecks, and manual receipt calculation delays.",
+      system:
+        "Next.js App Router Storefront + Zustand Persistent Cart + Admin Inventory Dashboard + WhatsApp Order Webhook.",
+      architecture: [
+        "Server-Side Rendered (SSR) product catalog for fast LCP & SEO performance",
+        "Zustand lightweight state store for persistent local shopping cart",
+        "Role-protected Admin Dashboard for real-time SKU stock updates and pricing",
+        "Mobile-optimized responsive layouts tailored for festive mobile shoppers",
+      ],
+      keyFeatures: [
+        "Live product search & category filtering (Sparklers, Chakkars, Flower Pots, Combos)",
+        "Instant cart badge calculator with item-wise discount breakdown",
+        "Direct WhatsApp order payload dispatch with buyer details",
+        "Admin product CRUD manager & stock alert badges",
+      ],
+      challenges: [
+        "Optimizing high-resolution product imagery and category assets for fast sub-second mobile page loads during peak festive traffic",
+      ],
+      impact: [
+        "Live production app deployed on Vercel (https://crackers-rho.vercel.app/)",
+        "Streamlined order processing time by 60% through automated WhatsApp dispatch",
+        "100% stock accuracy managed via real-time admin inventory controls",
+      ],
+    },
+    metrics: [
+      { label: "Live Deployment", value: "Vercel" },
+      { label: "Order Speed", value: "+60%" },
+      { label: "Stock Accuracy", value: "100%" },
+    ],
+  },
+  {
     id: "vehicle-tracking",
     title: "Vehicle Tracking System",
     category: "Real-time Fleet Intelligence",
