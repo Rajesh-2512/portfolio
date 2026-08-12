@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background tile -->
+  <rect width="32" height="32" rx="8" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Inner ambient border -->
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="url(#glowGrad)" stroke-width="1"/>
+
+  <!-- Vertical stem of R -->
+  <rect x="8" y="7" width="3.5" height="18" rx="1.75" fill="url(#accentGrad)"/>
+  
+  <!-- Upper loop of R -->
+  <path d="M 11.5 7.5 H 17.5 C 20.2 7.5 22 9.2 22 11.75 C 22 14.3 20.2 16 17.5 16 H 11.5" 
+        fill="none" 
+        stroke="url(#accentGrad)" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+
+  <!-- Diagonal leg of R -->
+  <path d="M 15 15.5 L 21.5 24.5" 
+        fill="none" 
+        stroke="url(#accentGrad)" 
+        stroke-width="3" 
+        stroke-linecap="round"/>
+</svg>

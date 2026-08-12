@@ -37,6 +37,11 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   twitter: {
     card: "summary_large_image",
     title: "Rajesh Kannan A | Frontend Engineer",
